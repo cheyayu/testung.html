@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Things about Moll</title>
+
+    <!-- Import Google Font Poppins -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        min-height: 100vh;
+        background: #e5e5e5;
+        padding: 20px;
+      }
+
+      .card {
+        background: #fff;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        max-width: 260px;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .image-container {
+        position: relative;
+        background: #a5b991;
+        padding: 15px;
+      }
+
+      .image-container img {
+        width: 100%;
+        border-radius: 12px;
+      }
+
+      .price {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: white;
+        padding: 5px 8px;
+        border-radius: 20px;
+        font-weight: 500;
+      }
+
+      .content {
+        padding: 15px;
+      }
+
+      .title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      .title a {
+        font-size: 14px;
+        text-decoration: none;
+        color: #2c2c2c;
+        font-weight: 500;
+      }
+
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .tag {
+        font-size: 12px;
+        background: #e5eadc;
+        padding: 5px 10px;
+        border-radius: 10px;
+      }
+
+      /* Bagian deskripsi bawah */
+      .description {
+        max-width: 260px;
+        background: #fff;
+        padding: 15px;
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        font-size: 14px;
+        line-height: 1.5;
+        text-align: justify;
+        opacity: 0;
+        transform: translateY(-10px);
+        animation: slideDown 0.6s ease forwards;
+      }
+      .card {
+        max-width: 260px;
+
+        font-size: 14px;
+
+        text-align: justify;
+        opacity: 0;
+        transform: translateY(-10px);
+        animation: slideDown 0.6s ease forwards;
+      }
+      @keyframes slideDown {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Responsif */
+      @media (max-width: 480px) {
+        .card,
+        .description {
+          max-width: 90%;
+        }
+        .title {
+          font-size: 16px;
+        }
+        .title a {
+          font-size: 13px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Card -->
+    <div class="card">
+      <div class="image-container">
+        <img
+          src="https://i.pinimg.com/1200x/54/33/b6/5433b66d6bde5ff890d972bafa260dd3.jpg"
+          alt="Ice Matcha"
+        />
+        <div class="price">Moll</div>
+      </div>
+      <div class="content">
+        <div class="title">
+          <span>Sepuh per gendong an</span>
+          <a href="#"> </a>
+        </div>
+        <div class="tags">
+          <span class="tag">Layout</span>
+          <span class="tag">Upfoll</span>
+          <span class="tag">Roblox</span>
+          <span class="tag">Jamey ngalay</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Deskripsi (muncul dengan animasi slide down) -->
+    <div class="description">
+      Orang ngalay, jamet, nan imup. orang sokab (becanda) yang super berisik
+      tapi naikin mood, orang nyebelin dan setiap saat iseng, lebih bocil
+      daripada ak. BUT also supa dupa mega KIND orang dengan kebaikan sebesar
+      bumi, atau mungkin galaksi. thank you for being born, molly. selalu sehat,
+      bahagia, dan tetep jadi happy virus ya jamet ngalay, ily 1000juta
+
+      <p class="footer">- Written by Che</p>
+    </div>
+  </body>
+</html>
